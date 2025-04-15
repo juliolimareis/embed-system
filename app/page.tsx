@@ -143,23 +143,21 @@ export default function Login() {
   )
 }
 
-export const LoginButton = () => {
-  const { user, loading, loginWithGoogle, logout } = useAuth();
+// export const LoginButton = () => {
+//   const { user, loading, loginWithGoogle, logout } = useAuth();
 
-  if (loading) {
-    return <button disabled>Loading...</button>;
-  }
+//   if (loading) {
+//     return <button disabled>Loading...</button>;
+//   }
 
-  if (user) {
-    return (
-      <div>
-        <span>Welcome, {user.displayName || user.email}!</span>
-        <button onClick={logout}>Logout</button>
-      </div>
-    );
-  }
+//   if (user) {
+//     return (
+//       <div>
+//         <span>Welcome, {user.displayName || user.email}!</span>
+//         <button onClick={logout}>Logout</button>
+//       </div>
+//     );
+//   }
 
-  return <button onClick={loginWithGoogle}>Login with Google</button>;
-};
-
-
+//   return <button onClick={loginWithGoogle}>Login with Google</button>;
+// };
