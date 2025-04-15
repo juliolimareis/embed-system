@@ -34,7 +34,8 @@ export default function ModuleById() {
     <div className="w-full h-screen">
       {
         !!(menuItem?.href) ? (
-          <iframe 
+          <iframe
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals allow-downloads allow-presentation allow-top-navigation allow-pointer-lock allow-orientation-lock allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
             src={menuItem?.href}
             width="100%"
             height="100%"
