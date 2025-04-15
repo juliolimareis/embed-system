@@ -1,7 +1,7 @@
 'use client'
 
-import { initializeApp, } from "firebase/app";
 import { getAuth, } from "firebase/auth";
+import { initializeApp, } from "firebase/app";
 import { getFirestore, } from "firebase/firestore";
 
 export const useFirebase = () => {
@@ -10,10 +10,6 @@ export const useFirebase = () => {
   }
 
   const strJsonConfig = atob(process.env.NEXT_PUBLIC_FIREBASE_CONFIG as string);
-
-  // console.log("FIREBASE_CONFIG", process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
-  // console.log("strJsonConfig", strJsonConfig);
-
   const firebaseConfig = JSON.parse(strJsonConfig);
 
   const app = initializeApp(firebaseConfig);

@@ -12,12 +12,12 @@ type MenuItemProps = {
 }
 
 export default class MenuItem {
-  id: string;
-  name: string;
-  href: string;
-  icon: string;
+  readonly id: string;
+  readonly name: string;
+  readonly href: string;
+  readonly icon: string;
 
-  deployedAt: Date | null;
+  readonly deployedAt: Date | null;
   // updatedAt: Date;
   // createdAt: Date;
   
@@ -34,7 +34,7 @@ export default class MenuItem {
     }
   }
 
-  create(props: MenuItemProps){
+  static create(props: MenuItemProps){
     return new MenuItem(props)
   }
 }
